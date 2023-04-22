@@ -1,17 +1,19 @@
-<div id="<%= dom_id event %>">
-  <p>
-    <strong>Title:</strong>
+<div id="<%= dom_id event %>" class="col-6 shadow rounded mb-5 p-5">
+  <h3 class="text-center mb-5">
     <%= event.title %>
-  </p>
+  </h3>
 
   <p>
-    <strong>Start time:</strong>
-    <%= event.start_time %>
+    <strong class="text-muted">
+      Start time:
+    </strong><br>
+    <small><%= event.start_time.strftime("%B %d, %Y %I:%M %p") %></small>
   </p>
-
+  <hr>
   <p>
-    <strong>End time:</strong>
-    <%= event.end_time %>
+    <strong class="text-muted">
+      End time:
+    </strong><br>
+    <small><%= event.end_time.strftime("%B %d, %Y %I:%M %p") %></small>
   </p>
-
 </div>
